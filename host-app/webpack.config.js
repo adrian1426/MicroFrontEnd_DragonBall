@@ -44,7 +44,8 @@ module.exports = {
       name: "host_app",
       filename: "remoteEntry.js",
       remotes: {
-        "Navbar": "mf_navbar@http://localhost:3001/remoteEntry.js"
+        "Navbar": "mf_navbar@http://localhost:3001/remoteEntry.js",
+        "Counter": "mf_counter@http://localhost:3002/remoteEntry.js"
       },
       exposes: {},
       shared: {
