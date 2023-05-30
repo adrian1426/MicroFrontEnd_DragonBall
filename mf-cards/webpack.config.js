@@ -49,7 +49,9 @@ module.exports = {
       name: "mf_cards",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./placeCards": "./src/placeCards.js"
+      },
       shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
