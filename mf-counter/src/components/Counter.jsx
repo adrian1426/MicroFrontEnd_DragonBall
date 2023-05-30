@@ -12,6 +12,10 @@ const Counter = (props) => {
     setCounter(c => c - value);
   };
 
+  if (!initialCounter) {
+    throw new Error('El prop initialCounter es obligatorio');
+  }
+
   return (
     <div className="text-4xl">
       <button
