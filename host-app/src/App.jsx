@@ -10,6 +10,7 @@ import Loader from "./components/Loader";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const PersonajesPage = lazy(() => import("./pages/PersonajesPage"));
+const PersonajeDetailPage = lazy(() => import("mf_details/Details"))
 
 const App = () => (
   <BrowserRouter>
