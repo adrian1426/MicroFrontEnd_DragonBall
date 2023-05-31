@@ -10,7 +10,7 @@ import Loader from "./components/Loader";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const PersonajesPage = lazy(() => import("./pages/PersonajesPage"));
-const PersonajeDetailPage = lazy(() => import("mf_details/Details"))
+const DetallePage = lazy(() => import("./pages/DetallePage"))
 
 const App = () => (
   <BrowserRouter>
@@ -20,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/personajes" element={<PersonajesPage />} />
+          <Route path="/personajes/:id" element={<DetallePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<Navigate to='/' />} />
           {/* <Route path="*" element={<NotFoundPage />} /> */}
