@@ -5,9 +5,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 const PersonajesPage = () => {
   return (
     <div>
-      PersonajesPage
-      <hr />
-
       <ErrorBoundary>
         <Cards_mf />
       </ErrorBoundary>
