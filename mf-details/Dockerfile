@@ -8,6 +8,6 @@ RUN npm i -g http-server
 RUN npm install
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 3004
 
-CMD ["http-server","dist","-p","3000"]
+CMD ["http-server","dist","-p","3004"]
