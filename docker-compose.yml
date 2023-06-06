@@ -3,9 +3,9 @@ services:
   host_app:
     build:
       context: host-app
-      dockerfile: ./host-app/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
-      - "3000":"3000"
+      - "3000:3000"
     links:
       - mf_cards
       - mf_counter
@@ -14,25 +14,25 @@ services:
   mf_cards:
     build:
       context: mf-cards
-      dockerfile: ./mf-cards/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
-      - "3003":"3003"
+      - "3003:3003"
   mf_counter:
     build:
       context: mf-counter
-      dockerfile: ./mf-counter/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
-      - "3002":"3002"
+      - "3002:3002"
   mf_details:
     build:
       context: mf-details
-      dockerfile: ./mf-details/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
-      - "3004":"3004"
+      - "3004:3004"
   mf_navbar:
     build:
       context: mf-navbar
-      dockerfile: ./mf-navbar/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
-      - "3001":"3001"
+      - "3001:3001"
 

@@ -1,12 +1,15 @@
 FROM node:16.17.0-alpine
 
+RUN mkdir app
 WORKDIR /app
 
-COPY . .
+COPY ./package.json .
 
+RUN yarn install
+COPY ./ .
+
+RUN yarn build
 RUN npm i -g http-server
-RUN npm install
-RUN npm run build
 
 EXPOSE 3000
 
