@@ -15,4 +15,14 @@ describe("Counter tests", () => {
 
     cy.get("span").contains("21");
   });
+
+  it("Debe Disminuir el counter", () => {
+    cy.visit("http://localhost:3000/");
+
+    cy.get("span").contains("20");
+    const btnMinus = cy.get("button").contains("-1");
+    btnMinus.click();
+
+    cy.get("span").contains("19");
+  });
 });
